@@ -11,7 +11,7 @@ Historically was able to (and may still) bypass
 - Windows Defender
 - Malwarebytes Anti-Malware
 
-![cortex](https://github.com/user-attachments/assets/d2ff0d1c-70eb-49be-bbb3-88e56bdb96e7)
+![cortex](https://github.com/user-attachments/assets/7b78bd8b-c4d1-4be7-9d00-66bd9cec3de3)
 
 ## Features
 - Fully custom sleep implementation with thread callstack spoofing using NtCreateEvent and NtWaitForSingleObject
