@@ -1,6 +1,8 @@
 # koneko
 A Cobalt Strike shellcode loader with multiple advanced evasion features.
 
+![1739210063119](https://github.com/user-attachments/assets/1d3d84fc-edf1-4e1a-b754-bdb382de5f36)
+
 ## Disclaimer
 Don't be evil with this. I created this tool to learn. I'm not responsible if the Feds knock on your door.
 
