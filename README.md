@@ -10,10 +10,11 @@ Don't be evil with this. I created this tool to learn. I'm not responsible if th
 
 Historically was able to (and may still) bypass
 - Palo Alto Cortex xDR
+- Microsoft Defender for Endpoints
 - Windows Defender
 - Malwarebytes Anti-Malware
 
-![cortex](https://github.com/user-attachments/assets/7b78bd8b-c4d1-4be7-9d00-66bd9cec3de3)
+![cortex](https://github.com/user-attachments/assets/340b46f1-f123-4c4a-ab57-9eabae38865e)
 
 ## Features
 - Fully custom sleep implementation with thread callstack spoofing using NtCreateEvent and NtWaitForSingleObject
